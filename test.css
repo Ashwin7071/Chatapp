@@ -1,0 +1,239 @@
+/* ----------------------------------------GOOGLEFONTS-IMPORT */
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@700&family=Noto+Sans:ital,wght@0,300;0,500;0,600;1,900&family=Nunito+Sans:opsz,wght@6..12,300&family=Open+Sans:ital,wght@1,400;1,500&family=Playfair+Display&family=Poppins:wght@200;500;600&family=Raleway:ital,wght@1,100&display=swap');
+
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style:none;
+}
+:root{
+    --bg-color:#222327;
+    --textcolor:#fff;
+    --main-color:#0db92f;
+}
+body
+{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--textcolor);
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    top:0;
+    right: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background:transparent ;
+    padding:28px 8PX;
+    transition: all 50s ease;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+.logo i{
+    color:var(--main-color);
+    font-size:28px;
+    margin-right:8px ;
+}
+.logo span{
+    color: var(--textcolor);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+}
+.navbar a
+{
+ color: var(--textcolor);
+ font-size: 1.1rem;
+ font-weight: 300;
+ padding: 5px;
+ margin: 0px 30px;
+ transition: all .50s ease;
+}
+.navbar a:hover
+{
+    color: aqua;
+}
+.navbar a.active    
+{
+    color: aqua;
+}
+.main
+{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--textcolor);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.user
+{
+    display: flex;
+    align-items: center;
+}
+.user i
+{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color:aqua;
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--textcolor);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+@media(max-width:1280px){
+    header{
+        padding: 8px 0.5%;
+        transition: .2s;
+        opacity: 300%;
+    }
+    .navbar a{
+        padding: 0.5px 0;
+        margin: 0 5px;
+        font-weight: 500;
+        color: rgb(239, 236, 236);
+    }
+    .navbar a.active    
+{
+    color: rgb(188, 8, 8);
+}
+}
+/* @media(max-width:1090px)
+{
+    #menu-icon
+    {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 27vh;
+        background:rgb(151, 157, 139);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 6px 0;
+        padding: 0px 8px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color:var(--textcolor);
+        transform:translateY(5px);
+    }
+    .navbar a.active{
+        color:var(--textcolor);
+    }
+    .navbar .open
+    {
+        right: 2%;
+    }
+} */
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 27vh;
+        background: rgb(151, 157, 139);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.50s ease;
+        
+        /* Add the 'open' class when the screen size is smaller */
+        &.open {
+            right: 2%;
+        }
+    }
+    
+    .navbar a {
+        display: block;
+        margin: 6px 0;
+        padding: 0px 8px;
+        transition: all 0.50s ease;
+    }
+    
+    .navbar a:hover {
+        color: var(--textcolor);
+        transform: translateY(5px);
+    }
+    
+    .navbar a.active {
+        color: var(--textcolor);
+    }
+}
+@media (max-width: 679px) {
+    #menu-icon {
+        display: block;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 27vh;
+        background: rgb(151, 157, 139);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.50s ease;
+
+        /* Add the 'open' class when the screen size is below 679px */
+        &.open {
+            right: 2%;
+        }
+    }
+
+    .navbar a {
+        display: block;
+        margin: 6px 0;
+        padding: 0px 8px;
+        transition: all 0.50s ease;
+    }
+
+    .navbar a:hover {
+        color: var(--textcolor);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--textcolor);
+    }
+}
